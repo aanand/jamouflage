@@ -10,10 +10,6 @@
   padding: 12px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12) inset;
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12) inset;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12) inset;
 }
 
