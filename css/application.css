@@ -1,8 +1,23 @@
 * {margin: 0; padding: 0;}
 
+html {
+  background: #444;
+}
+
 .wrapper {
   height: 524px;
   position: relative;
+  background-image: url('../img/graph-paper.png');
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
 
 .jamvatar-wrapper {
@@ -15,11 +30,12 @@
 
 .control-panel {
   position: absolute;
-  top: 16px;
+  top: 66px;
   left: 16px;
   width: 250px;
   padding: 16px;
   background: white;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.24);
 }
 
 .drop-target {

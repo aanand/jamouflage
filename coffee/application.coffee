@@ -34,7 +34,7 @@ class Generator
         ctx.drawImage(backgroundImage, jamvatarWidth/2 - backgroundImage.width/2, -jamvatarOffsetY)
 
     @wrapperCSS = ko.computed =>
-      css = "box-sizing: border-box; padding-top: #{jamvatarOffsetY}px; background-color: pink;"
+      css = "box-sizing: border-box; padding-top: #{jamvatarOffsetY}px;"
 
       if image = @backgroundImage()
         css += "background-image: url(#{image.src}); background-position: top center;"
@@ -44,7 +44,7 @@ class Generator
     @jamvatarWrapperCSS = -> "width: #{jamvatarWidth}px; height: #{jamvatarHeight}px"
 
     @jamvatarCSS = ko.computed =>
-      css = "width: #{jamvatarWidth}px; height: #{jamvatarHeight}px; background-color: yellow;"
+      css = "width: #{jamvatarWidth}px; height: #{jamvatarHeight}px;"
 
       if image = @jamvatarImage()
         css += "background-image: url(#{image.src});"

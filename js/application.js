@@ -43,7 +43,7 @@
       });
       this.wrapperCSS = ko.computed(function() {
         var css, image;
-        css = "box-sizing: border-box; padding-top: " + jamvatarOffsetY + "px; background-color: pink;";
+        css = "box-sizing: border-box; padding-top: " + jamvatarOffsetY + "px;";
         if (image = _this.backgroundImage()) {
           css += "background-image: url(" + image.src + "); background-position: top center;";
         }
@@ -54,7 +54,7 @@
       };
       this.jamvatarCSS = ko.computed(function() {
         var css, image;
-        css = "width: " + jamvatarWidth + "px; height: " + jamvatarHeight + "px; background-color: yellow;";
+        css = "width: " + jamvatarWidth + "px; height: " + jamvatarHeight + "px;";
         if (image = _this.jamvatarImage()) {
           css += "background-image: url(" + image.src + ");";
         }
