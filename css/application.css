@@ -28,7 +28,6 @@
 
 .drop-target {
   padding: 80px 0;
-  margin-bottom: 16px;
   border: 3px dotted #ddd;
   border-radius: 10px;
   text-align: center;
@@ -36,4 +35,8 @@
 
 .drop-target.dragover {
   background: #eee;
+}
+
+.customise {
+  margin-top: 16px;
 }

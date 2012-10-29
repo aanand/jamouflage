@@ -10,14 +10,9 @@
       <div class="control-panel">
         <div class="drop-target">Drop your background here.</div>
 
-        <form class="form" style="display: none" data-bind="visible: showForm()">
-          <div class="control-group">
-            <label class="control-label">Download</label>
-            <div class="controls">
-              <button class="btn" type="button" data-bind="click: downloadJamvatar">Jamvatar</button>
-            </div>
-          </div>
-        </form>
+        <div class="customise" data-bind="visible: showControls()">
+          <button class="btn" type="button" data-bind="click: downloadJamvatar">Download Jamvatar</button>
+        </div>
       </div>
 
       <div class="jamvatar-wrapper" data-bind="attr: { style: jamvatarWrapperCSS() }">

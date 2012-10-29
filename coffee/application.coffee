@@ -51,7 +51,7 @@ class Generator
 
       css
 
-    @showForm = ko.computed => @backgroundImage()?
+    @showControls = ko.computed => @backgroundImage()?
 
   downloadBackground: -> window.open(@backgroundImage().src)
   downloadJamvatar:   -> window.open(@jamvatarImage().src)

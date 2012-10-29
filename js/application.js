@@ -60,7 +60,7 @@
         }
         return css;
       });
-      this.showForm = ko.computed(function() {
+      this.showControls = ko.computed(function() {
         return _this.backgroundImage() != null;
       });
     }
