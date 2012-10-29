@@ -1,0 +1,39 @@
+* {margin: 0; padding: 0;}
+
+.wrapper {
+  height: 524px;
+  position: relative;
+}
+
+.jamvatar-wrapper {
+  margin: -12px auto 0;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12) inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12) inset;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12) inset;
+}
+
+.control-panel {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 250px;
+  padding: 16px;
+  background: white;
+}
+
+.drop-target {
+  padding: 80px 0;
+  margin-bottom: 16px;
+  border: 3px dotted #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.drop-target.dragover {
+  background: #eee;
+}

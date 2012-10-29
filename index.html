@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="wrapper" data-bind="attr: { style: wrapperCSS() }">
+      <div class="control-panel">
+        <div class="drop-target">Drop your background here.</div>
+
+        <form class="form" style="display: none" data-bind="visible: showForm()">
+          <div class="control-group">
+            <label class="control-label">Download</label>
+            <div class="controls">
+              <button class="btn" type="button" data-bind="click: downloadJamvatar">Jamvatar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="jamvatar-wrapper" data-bind="attr: { style: jamvatarWrapperCSS() }">
+        <div class="jamvatar" data-bind="attr: { style: jamvatarCSS() }"></div>
+      </div>
+    </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.1.0/knockout-min.js"></script>
+    <script src="js/application.js"></script>
+  </body>
+</html>
