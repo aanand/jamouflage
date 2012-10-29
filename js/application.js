@@ -43,7 +43,7 @@
       });
       this.wrapperCSS = ko.computed(function() {
         var css, image;
-        css = "padding-top: " + jamvatarOffsetY + "px; background-color: pink;";
+        css = "box-sizing: border-box; padding-top: " + jamvatarOffsetY + "px; background-color: pink;";
         if (image = _this.backgroundImage()) {
           css += "background-image: url(" + image.src + "); background-position: top center;";
         }
