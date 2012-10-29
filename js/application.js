@@ -6,7 +6,7 @@
     window.dropper = new ImageDropper($('.drop-target'));
     window.generator = new Generator(395, 395, 91);
     dropper.onImageDropped = function(image) {
-      return generator.image(image);
+      return generator.backgroundImage(image);
     };
     return ko.applyBindings(generator);
   };
@@ -29,22 +29,7 @@
 
     function Generator(jamvatarWidth, jamvatarHeight, jamvatarOffsetY) {
       var _this = this;
-      this.image = ko.observable(null);
-      this.scaleInput = ko.observable("100");
-      this.yOffsetInput = ko.observable("0");
-      this.backgroundImage = ko.computed(function() {
-        var height, image, width;
-        image = _this.image();
-        if (image == null) {
-          return null;
-        }
-        console.log("drawing backgroundImage");
-        width = image.width * _this.scale();
-        height = image.height * _this.scale();
-        return draw(width, height, function(ctx) {
-          return ctx.drawImage(image, 0, _this.yOffset(), width, height);
-        });
-      });
+      this.backgroundImage = ko.observable(null);
       this.jamvatarImage = ko.computed(function() {
         var backgroundImage;
         backgroundImage = _this.backgroundImage();
@@ -53,10 +38,7 @@
         }
         console.log("drawing jamvatarImage");
         return draw(jamvatarWidth, jamvatarHeight, function(ctx) {
-          var x, y;
-          x = jamvatarWidth / 2 - backgroundImage.width / 2;
-          y = -jamvatarOffsetY + _this.yOffset();
-          return ctx.drawImage(_this.image(), x, y, backgroundImage.width, backgroundImage.height);
+          return ctx.drawImage(backgroundImage, jamvatarWidth / 2 - backgroundImage.width / 2, -jamvatarOffsetY);
         });
       });
       this.wrapperCSS = ko.computed(function() {
@@ -79,17 +61,9 @@
         return css;
       });
       this.showForm = ko.computed(function() {
-        return _this.image() != null;
+        return _this.backgroundImage() != null;
       });
     }
-
-    Generator.prototype.scale = function() {
-      return (Number(this.scaleInput()) || 100) / 100;
-    };
-
-    Generator.prototype.yOffset = function() {
-      return Number(this.yOffsetInput()) || 0;
-    };
 
     Generator.prototype.downloadBackground = function() {
       return window.open(this.backgroundImage().src);
