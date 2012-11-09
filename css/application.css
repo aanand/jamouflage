@@ -28,10 +28,27 @@ html {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12) inset;
 }
 
+.about {
+  position: absolute;
+  top: 66px;
+  right: 16px;
+}
+
+.about h1 {
+  margin-top: 0;
+}
+
+.about .signoff {
+  text-align: right;
+}
+
 .control-panel {
   position: absolute;
   top: 66px;
   left: 16px;
+}
+
+.control-panel, .about {
   width: 250px;
   padding: 16px;
   background: white;
