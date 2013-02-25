@@ -4,7 +4,7 @@
 
   init = function() {
     window.dropper = new ImageDropper($('.drop-target'));
-    window.generator = new Generator(395, 395, 92);
+    window.generator = new Generator(395, 395, 100);
     dropper.onImageDropped = function(image) {
       return generator.backgroundImage(image);
     };
